@@ -23,8 +23,7 @@ const response = await fetch(
   "https://hackclub.slack.com/api/functions.workflows.steps.update",
   {
     headers: {
-      "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+      Cookie: process.env.SLACK_COOKIE!,
     },
     body: formData,
     method: "POST",
